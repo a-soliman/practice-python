@@ -10,3 +10,33 @@ Extras:
 
 If the number is a multiple of 4, print out a different message.
 '''
+
+
+def main():
+    user_num = get_user_num()
+    is_even = False
+
+    if user_num % 2 == 0:
+        is_even = True
+
+        if user_num % 4 == 0:
+            return message(is_even, "multiple of 4")
+
+    return message(is_even)
+
+
+def get_user_num():
+    return int(input("Please provide a number: "))
+
+
+def message(isEven, multiple_of_4=False):
+
+    if multiple_of_4:
+        print("multiple of 4")
+    elif not multiple_of_4 and isEven:
+        print("Even num")
+    else:
+        print("Odd num")
+
+
+main()
