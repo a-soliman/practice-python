@@ -7,3 +7,15 @@ Concepts for this week:
 List indexing
 Strings are lists
 '''
+
+
+def is_palindrome(s):
+    return s == "".join(reversed(s))
+
+
+def get_input():
+    s = input("Please provide a string: ")
+    print(is_palindrome(s))
+
+
+get_input()
